@@ -1,0 +1,31 @@
+{
+  "name": "mimosa-hogan",
+  "version": "1.0.0",
+  "homepage": "https://github.com/dbashford/mimosa-hogan",
+  "author": "David Bashford",
+  "description": "A Hogan client template compiler for Mimosa 2.0+",
+  "contributors": [
+    {
+      "name": "David Bashford",
+      "email": "dbashford@hotmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dbashford/mimosa-hogan"
+  },
+  "keywords": [
+    "mimosa",
+    "mmodule",
+    "compiler",
+    "hogan"
+  ],
+  "dependencies": {
+    "hogan.js": "2.0.0"
+  },
+  "license": "MIT",
+  "main": "./src",
+  "engines": {
+    "node": ">=0.10"
+  }
+}
