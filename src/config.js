@@ -3,16 +3,16 @@
 exports.defaults = function() {
   return {
     hogan: {
-      extensions: [ "hog", "hogan", "hjs" ],
+      extensions: [ "hog", "hogan", "hjs" ]
     }
   };
 };
 
 exports.placeholder = function() {
-  return "\t\n\n"+
-         "  # hogan:               # config settings for the Hogan compiler module\n" +
-         "    # lib: undefined    # use this property to provide a specific version of Hogan\n" +
-         "    # extensions: [\"hog\", \"hogan\", \"hjs\"]  # default extensions for Hogan files\n";
+  return "\t\n\n" +
+         "  hogan:               # config settings for the Hogan compiler module\n" +
+         "    lib: undefined    # use this property to provide a specific version of Hogan\n" +
+         "    extensions: [\"hog\", \"hogan\", \"hjs\"]  # default extensions for Hogan files\n";
 };
 
 exports.validate = function( config, validators ) {
@@ -21,7 +21,7 @@ exports.validate = function( config, validators ) {
   if ( validators.ifExistsIsObject( errors, "hogan config", config.hogan ) ) {
 
     if ( !config.hogan.lib ) {
-      config.hogan.lib = require( 'hogan.js' );
+      config.hogan.lib = require( "hogan.js" );
     }
 
     if ( validators.isArrayOfStringsMustExist( errors, "hogan.extensions", config.hogan.extensions ) ) {
@@ -33,6 +33,3 @@ exports.validate = function( config, validators ) {
 
   return errors;
 };
-
-
-
